@@ -5,10 +5,10 @@ import { useChat } from "@ai-sdk/react"
 
 import { Message } from "ai"
 
-import Bubble from "./components/Bubble"
-import PromptSuggestionsRow from "./components/PromptSuggestionsRow"
-import LoadingBubble from "./components/LoadingBubble"
-import { FaPaperPlane } from "react-icons/fa"
+// import Bubble from "./components/Bubble"
+// import PromptSuggestionsRow from "./components/PromptSuggestionsRow"
+// import LoadingBubble from "./components/LoadingBubble"
+// import { FaPaperPlane } from "react-icons/fa"
 
 const Chat = () => {
   const {
@@ -37,15 +37,19 @@ const Chat = () => {
         {noMessages ? (
           <>
             <p>Ask me anything about the F1!</p>
-            <PromptSuggestionsRow onPromptClick={handlePromptClick} />
+            {/* <PromptSuggestionsRow onPromptClick={handlePromptClick} /> */}
             <br />
           </>
         ) : (
-          <div className="messages-container">
-            {messages.map((message, index) => (
-              <Bubble key={index} message={message} />
-            ))}
-            {isLoading && <LoadingBubble />}
+          // Some bubble here
+          // <div className="messages-container">
+          //   {messages.map((message, index) => (
+          //     <Bubble key={index} message={message} />
+          //   ))}
+          //   {isLoading && <LoadingBubble />}
+          // </div>
+          <div>
+            <p>with messages</p>
           </div>
         )}
       </section>
@@ -57,7 +61,7 @@ const Chat = () => {
           placeholder="Ask me something..."
         />
         <button type="submit" aria-label="Send message">
-          <FaPaperPlane />
+          {/* <FaPaperPlane /> */}
         </button>
       </form>
     </main>
